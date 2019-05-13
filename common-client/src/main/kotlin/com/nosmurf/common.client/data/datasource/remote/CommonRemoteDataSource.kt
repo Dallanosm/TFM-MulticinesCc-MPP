@@ -1,6 +1,6 @@
 package com.nosmurf.common.client.data.datasource.remote
 
-import com.nosmurf.model.*
+import com.nosmurf.common.client.*
 import io.ktor.client.HttpClient
 import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.json.serializer.KotlinxSerializer

@@ -1,10 +1,10 @@
 package com.nosmurf.common.client.domain.usecase
 
 import com.nosmurf.common.client.domain.repository.Repository
-import com.nosmurf.model.Comment
-import com.nosmurf.model.Movie
-import com.nosmurf.model.MovieDetail
-import com.nosmurf.model.NewComment
+import com.nosmurf.common.client.Comment
+import com.nosmurf.common.client.Movie
+import com.nosmurf.common.client.MovieDetail
+import com.nosmurf.common.client.NewComment
 
 suspend fun getMovies(repository: Repository): List<Movie> = repository.getMovies()
 

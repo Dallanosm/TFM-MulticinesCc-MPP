@@ -22,7 +22,7 @@ mainClassName = 'com.nosmurf.backend.ServerKt'
 sourceCompatibility = 1.8
 
 dependencies {
-    expectedBy project(":common")
+    expectedBy project(":common-client")
 
     implementation "io.ktor:ktor-client-apache:$ktor_version"
     implementation "io.ktor:ktor-client-json-jvm:$ktor_version"

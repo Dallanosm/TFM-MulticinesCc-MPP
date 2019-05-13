@@ -1,4 +1,4 @@
-package com.nosmurf.model
+package com.nosmurf.common.client
 
 import kotlinx.serialization.Serializable
 

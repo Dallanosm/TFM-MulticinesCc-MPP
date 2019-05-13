@@ -3,7 +3,6 @@ rootProject.name = 'tfm-multicinescc-mpp'
 enableFeaturePreview('GRADLE_METADATA')
 
 include 'backend'
-include 'common'
 include 'common-client'
 include 'frontend'
 include 'desktop'

@@ -1,9 +1,9 @@
 package com.nosmurf.common.client.data.datasource.remote
 
-import com.nosmurf.model.Comment
-import com.nosmurf.model.Movie
-import com.nosmurf.model.MovieDetail
-import com.nosmurf.model.NewComment
+import com.nosmurf.common.client.Comment
+import com.nosmurf.common.client.Movie
+import com.nosmurf.common.client.MovieDetail
+import com.nosmurf.common.client.NewComment
 
 interface RemoteDataSource {
     suspend fun getMovies(): List<Movie>
