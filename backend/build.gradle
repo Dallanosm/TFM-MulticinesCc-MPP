@@ -11,13 +11,16 @@ buildscript {
 
 }
 
+apply plugin: 'application'
 apply plugin: 'kotlin-platform-jvm'
 apply plugin: 'kotlinx-serialization'
 
-apply plugin: 'application'
+
+group 'multicinescc'
+version '0.0.4'
 apply plugin: 'com.github.johnrengelman.shadow'
 
-mainClassName = 'com.nosmurf.backend.ServerKt'
+mainClassName = "io.ktor.server.netty.EngineMain"
 
 sourceCompatibility = 1.8
 
@@ -44,6 +47,8 @@ dependencies {
     implementation "mysql:mysql-connector-java:5.1.46"
 
     implementation 'ch.qos.logback:logback-classic:1.2.3'
+
+    api 'org.jsoup:jsoup:1.11.3'
 
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
     testImplementation "org.jetbrains.kotlin:kotlin-test:$kotlin_version"

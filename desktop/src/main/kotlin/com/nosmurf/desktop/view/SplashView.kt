@@ -1,17 +1,22 @@
 package com.nosmurf.desktop.view
 
+import com.nosmurf.common.client.Movie
 import com.nosmurf.common.client.presentation.MoviesPresenter
 import com.nosmurf.common.client.presentation.MoviesView
 import com.nosmurf.desktop.di.errorHandler
+import com.nosmurf.desktop.di.executor
+import com.nosmurf.desktop.di.repository
 import javafx.beans.property.SimpleBooleanProperty
 import javafx.scene.Parent
 import tornadofx.*
 
-class SplashView : View("Splash"), MoviesView {
+class SplashView : View("Movies"), MoviesView {
 
     private val progressProperty = SimpleBooleanProperty()
 
     private val presenter = MoviesPresenter(
+            executor = executor,
+            repository = repository,
             errorHandler = errorHandler,
             view = this
     )
@@ -46,4 +51,9 @@ class SplashView : View("Splash"), MoviesView {
     override fun showMessage(message: String) {
         println("showMessage: $message")
     }
+
+    override fun showMovies(movies: List<Movie>) {
+
+    }
+
 }

@@ -50,6 +50,7 @@ data class CommentResponse(val comments: List<Comment>)
 @Serializable
 data class Comment(
         val id: Long,
+        val movieId: Long,
         val createdDate: Long,
         val value: String
 )
