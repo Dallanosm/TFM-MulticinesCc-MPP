@@ -1,4 +1,4 @@
-rootProject.name = 'multiplatform-seed'
+rootProject.name = 'tfm-multicinescc-mpp'
 
 enableFeaturePreview('GRADLE_METADATA')
 
