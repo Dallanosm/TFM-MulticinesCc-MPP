@@ -9,9 +9,9 @@
 import UIKit
 import ios
 
-class SplashViewController: UIViewController, SplashView {
+class MoviesViewController: UIViewController, MoviesView {
 
-    lazy var presenter: SplashPresenter = SplashPresenter(
+    lazy var presenter: MoviesPresenter = MoviesPresenter(
         view: self,
         errorHandler: IosErrorHandler())
 

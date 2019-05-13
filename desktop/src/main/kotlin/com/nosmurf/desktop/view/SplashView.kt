@@ -1,17 +1,17 @@
 package com.nosmurf.desktop.view
 
-import com.nosmurf.common.client.presentation.SplashPresenter
-import com.nosmurf.common.client.presentation.SplashView
+import com.nosmurf.common.client.presentation.MoviesPresenter
+import com.nosmurf.common.client.presentation.MoviesView
 import com.nosmurf.desktop.di.errorHandler
 import javafx.beans.property.SimpleBooleanProperty
 import javafx.scene.Parent
 import tornadofx.*
 
-class SplashView : View("Splash"), SplashView {
+class SplashView : View("Splash"), MoviesView {
 
     private val progressProperty = SimpleBooleanProperty()
 
-    private val presenter = SplashPresenter(
+    private val presenter = MoviesPresenter(
             errorHandler = errorHandler,
             view = this
     )

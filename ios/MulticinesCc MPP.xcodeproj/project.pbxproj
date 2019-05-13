@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD043D6D22059B0100E18726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD043D6C22059B0100E18726 /* AppDelegate.swift */; };
-		AD043D6F22059B0100E18726 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD043D6E22059B0100E18726 /* SplashViewController.swift */; };
+		AD043D6F22059B0100E18726 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD043D6E22059B0100E18726 /* MoviesViewController.swift */; };
 		AD043D7222059B0100E18726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD043D7022059B0100E18726 /* Main.storyboard */; };
 		AD043D7422059B0200E18726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD043D7322059B0200E18726 /* Assets.xcassets */; };
 		AD043D7722059B0200E18726 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD043D7522059B0200E18726 /* LaunchScreen.storyboard */; };
@@ -52,9 +52,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AD043D6922059B0100E18726 /* MultiplatformSeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiplatformSeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD043D6922059B0100E18726 /* MulticinesCc MPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MulticinesCc MPP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD043D6C22059B0100E18726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD043D6E22059B0100E18726 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		AD043D6E22059B0100E18726 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		AD043D7122059B0100E18726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD043D7322059B0200E18726 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD043D7622059B0200E18726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		AD043D6A22059B0100E18726 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD043D6922059B0100E18726 /* MultiplatformSeed.app */,
+				AD043D6922059B0100E18726 /* MulticinesCc MPP.app */,
 				AD043D7D22059B0200E18726 /* MultiplatformSeedTests.xctest */,
 				AD043D8822059B0200E18726 /* MultiplatformSeedUITests.xctest */,
 			);
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				AD043D6C22059B0100E18726 /* AppDelegate.swift */,
-				AD043D6E22059B0100E18726 /* SplashViewController.swift */,
+				AD043D6E22059B0100E18726 /* MoviesViewController.swift */,
 				AD043D7022059B0100E18726 /* Main.storyboard */,
 				AD043D7322059B0200E18726 /* Assets.xcassets */,
 				AD043D7522059B0200E18726 /* LaunchScreen.storyboard */,
@@ -176,7 +176,7 @@
 			);
 			name = MultiplatformSeed;
 			productName = MultiplatformSeed;
-			productReference = AD043D6922059B0100E18726 /* MultiplatformSeed.app */;
+			productReference = AD043D6922059B0100E18726 /* MulticinesCc MPP.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AD043D7C22059B0200E18726 /* MultiplatformSeedTests */ = {
@@ -238,7 +238,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AD043D6422059B0100E18726 /* Build configuration list for PBXProject "MultiplatformSeed" */;
+			buildConfigurationList = AD043D6422059B0100E18726 /* Build configuration list for PBXProject "MulticinesCc MPP" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -311,7 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD043D6F22059B0100E18726 /* SplashViewController.swift in Sources */,
+				AD043D6F22059B0100E18726 /* MoviesViewController.swift in Sources */,
 				AD043DA52205AE7B00E18726 /* IosErrorHandler.swift in Sources */,
 				AD043D6D22059B0100E18726 /* AppDelegate.swift in Sources */,
 			);
@@ -502,7 +502,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nosmurf.MultiplatformSeed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MulticinesCc MPP";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -526,7 +526,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nosmurf.MultiplatformSeed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "MulticinesCc MPP";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -613,7 +613,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AD043D6422059B0100E18726 /* Build configuration list for PBXProject "MultiplatformSeed" */ = {
+		AD043D6422059B0100E18726 /* Build configuration list for PBXProject "MulticinesCc MPP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD043D8F22059B0200E18726 /* Debug */,

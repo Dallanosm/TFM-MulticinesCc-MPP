@@ -1,7 +1,7 @@
 package com.nosmurf.web.presentation.app
 
 import com.nosmurf.web.presentation.navigator.Screen
-import com.nosmurf.web.presentation.screen.splash
+import com.nosmurf.web.presentation.screen.movies
 import react.*
 import react.dom.div
 
@@ -14,7 +14,7 @@ abstract class App : RComponent<RProps, AppState>() {
     override fun RBuilder.render() {
         div("app") {
             when (state.screen) {
-                Screen.SPLASH -> splash { setState { screen = it } }
+                Screen.MOVIES -> movies { setState { screen = it } }
 
             }
         }
@@ -22,7 +22,7 @@ abstract class App : RComponent<RProps, AppState>() {
 }
 
 class AppState : RState {
-    var screen: Screen = Screen.SPLASH
+    var screen: Screen = Screen.MOVIES
 }
 
 fun RBuilder.app() = child(App::class) {}

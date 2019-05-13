@@ -5,19 +5,19 @@ import com.github.salomonbrys.kodein.bind
 import com.github.salomonbrys.kodein.instance
 import com.github.salomonbrys.kodein.provider
 import com.nosmurf.android.R
-import com.nosmurf.common.client.presentation.SplashPresenter
-import com.nosmurf.common.client.presentation.SplashView
+import com.nosmurf.common.client.presentation.MoviesPresenter
+import com.nosmurf.common.client.presentation.MoviesView
 
-class SplashActivity : RootActivity<SplashView>(), SplashView {
+class MoviesActivity : RootActivity<MoviesView>(), MoviesView {
 
-    override val presenter: SplashPresenter by instance()
+    override val presenter: MoviesPresenter by instance()
 
-    override val layoutResourceId: Int = R.layout.activity_splash
+    override val layoutResourceId: Int = R.layout.activity_movies
 
     override val activityModule: Kodein.Module = Kodein.Module {
-        bind<SplashPresenter>() with provider {
-            SplashPresenter(
-                    view = this@SplashActivity,
+        bind<MoviesPresenter>() with provider {
+            MoviesPresenter(
+                    view = this@MoviesActivity,
                     errorHandler = instance()
             )
         }

@@ -2,8 +2,8 @@ package com.nosmurf.common.client.presentation
 
 import com.nosmurf.common.client.domain.error.ErrorHandler
 
-class SplashPresenter(view: SplashView, errorHandler: ErrorHandler) :
-        Presenter<SplashView>(view = view, errorHandler = errorHandler) {
+class MoviesPresenter(view: MoviesView, errorHandler: ErrorHandler) :
+        Presenter<MoviesView>(view = view, errorHandler = errorHandler) {
 
     override fun initialize() {
 
@@ -16,6 +16,6 @@ class SplashPresenter(view: SplashView, errorHandler: ErrorHandler) :
 }
 
 
-interface SplashView : Presenter.View {
+interface MoviesView : Presenter.View {
 
 }

@@ -1,15 +1,15 @@
 package com.nosmurf.web.presentation.screen
 
-import com.nosmurf.common.client.presentation.SplashPresenter
-import com.nosmurf.common.client.presentation.SplashView
+import com.nosmurf.common.client.presentation.MoviesPresenter
+import com.nosmurf.common.client.presentation.MoviesView
 import com.nosmurf.web.presentation.di.errorHandler
 import com.nosmurf.web.presentation.navigator.Screen
 import react.RBuilder
 import react.RProps
 
-class SplashScreen : RootScreen<SplashProps, SplashState, SplashView>(), SplashView {
+class SplashScreen : RootScreen<SplashProps, SplashState, MoviesView>(), MoviesView {
 
-    override val presenter: SplashPresenter = SplashPresenter(
+    override val presenter: MoviesPresenter = MoviesPresenter(
             view = this,
             errorHandler = errorHandler
     )
@@ -33,6 +33,6 @@ interface SplashProps : RProps {
     var onDownloadFinished: (Screen) -> Unit
 }
 
-fun RBuilder.splash(downloadFinished: (Screen) -> Unit) = child(SplashScreen::class) {
+fun RBuilder.movies(downloadFinished: (Screen) -> Unit) = child(SplashScreen::class) {
     attrs.onDownloadFinished = downloadFinished
 }
