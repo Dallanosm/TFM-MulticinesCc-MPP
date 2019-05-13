@@ -11,11 +11,12 @@ import io.ktor.http.takeFrom
 
 class CommonRemoteDataSource : RemoteDataSource {
 
-    private val endPoint: String = "http://llanosmunoz.com:8084"
+    private val endPoint: String = "http://llanosmunoz.com:8054"
 
     private val client: HttpClient = HttpClient {
         install(JsonFeature) {
             serializer = KotlinxSerializer().apply {
+                setMapper(MoviesResponse::class, MoviesResponse.serializer())
                 setMapper(Movie::class, Movie.serializer())
                 setMapper(MovieDetail::class, MovieDetail.serializer())
                 setMapper(Actor::class, Actor.serializer())

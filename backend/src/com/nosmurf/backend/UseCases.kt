@@ -29,14 +29,14 @@ fun deleteComment(id: Long): HttpStatusCode {
     return HttpStatusCode.OK
 }
 
-fun retrieveMovies(): List<Movie> {
+fun retrieveMovies(): MoviesResponse {
     val document = Jsoup.connect(MULTICINES_CACERES_MOVIES).get()
 
     val titles = document.select("h5")
     val images = document.select("img")
     val divs = document.select("div").filter { it.attr("class") == "info-line" }
 
-    return titles.map { it.text() }.map { title ->
+    return MoviesResponse(titles.map { it.text() }.map { title ->
         val movieDiv = divs.first { it.select("h5").text() == title }
 
         val id = movieDiv.attr("ng-click").split(",").first().replace("lookUpFilm(", "")
@@ -67,7 +67,7 @@ fun retrieveMovies(): List<Movie> {
                 classification = description?.capitalize() ?: "",
                 schedule = schedule
         )
-    }
+    })
 }
 
 fun movieDetail(id: Long): MovieDetail {

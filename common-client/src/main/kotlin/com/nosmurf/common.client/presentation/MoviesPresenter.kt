@@ -1,10 +1,10 @@
 package com.nosmurf.common.client.presentation
 
+import com.nosmurf.common.client.Movie
 import com.nosmurf.common.client.domain.error.ErrorHandler
 import com.nosmurf.common.client.domain.executor.Executor
 import com.nosmurf.common.client.domain.repository.Repository
 import com.nosmurf.common.client.domain.usecase.getMovies
-import com.nosmurf.common.client.Movie
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
