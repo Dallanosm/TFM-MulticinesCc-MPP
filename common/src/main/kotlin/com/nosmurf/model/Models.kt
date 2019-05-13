@@ -2,6 +2,10 @@ package com.nosmurf.model
 
 import kotlinx.serialization.Serializable
 
+
+@Serializable
+data class MoviesResponse(val movies: List<Movie>)
+
 @Serializable
 data class Movie(
         val id: String,
@@ -40,6 +44,8 @@ data class Schedule(
         val price: String
 )
 
+@Serializable
+data class CommentResponse(val comments: List<Comment>)
 
 @Serializable
 data class Comment(
@@ -47,3 +53,6 @@ data class Comment(
         val createdDate: Long,
         val value: String
 )
+
+@Serializable
+data class NewComment(val value: String)
