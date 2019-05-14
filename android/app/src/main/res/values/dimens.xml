@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="talks_list_margin">10dp</dimen>
-    <dimen name="circle_size">24dp</dimen>
-    <dimen name="item_talk_padding">10dp</dimen>
+    <dimen name="card_corner_radius">10dp</dimen>
+    <dimen name="chip_height">20dp</dimen>
+    <dimen name="chip_margin_horizontal">16dp</dimen>
+    <dimen name="toolbarHeight">64dp</dimen>
+    <dimen name="toolbarCloseIconHeight">64dp</dimen>
+    <dimen name="toolbarCloseIconMarginStart">16dp</dimen>
+    <dimen name="toolbarTitleMargin">32dp</dimen>
+    <dimen name="toolbarTitleSize">20sp</dimen>
 </resources>

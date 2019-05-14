@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/imageContent"
+                android:layout_width="match_parent"
+                android:layout_height="312dp"
+                android:elevation="4dp">
+
+                <ImageView
+                    android:id="@+id/background"
+                    android:layout_width="match_parent"
+                    android:layout_height="312dp"
+                    android:scaleType="fitXY"
+                    tools:src="#BD0000" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="180dp"
+                    android:layout_height="280dp"
+                    android:layout_centerInParent="true"
+                    app:cardCornerRadius="@dimen/card_corner_radius"
+                    app:cardElevation="4dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <ImageView
+                        android:id="@+id/movieImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY" />
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:elevation="6dp"
+                    android:paddingBottom="40dp">
+
+                    <TextView
+                        android:id="@+id/seeTrailer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/see_trailer_background"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_play"
+                        android:drawablePadding="10dp"
+                        android:focusable="true"
+                        android:padding="8dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:text="@string/see_trailer"
+                        android:textColor="@color/seeTrailerText"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/player"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:minHeight="44dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/movieTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/movie_title"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic"
+                    tools:text="El final de una vida universitaria" />
+
+                <TextView
+                    android:id="@+id/classification"
+                    android:layout_width="78dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/classification_background"
+                    android:gravity="center"
+                    android:textColor="@color/classification_text"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="+15" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sinopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/movie_title"
+                android:textStyle="italic"
+                tools:text="@string/sinopsis_test_text" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/nextPasses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp" />
+
+            <Button
+                android:id="@+id/seeComments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/seeTrailer"
+                android:text="@string/see_comments"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/progressView"
+        layout="@layout/view_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -11,6 +11,13 @@ import javafx.scene.Parent
 import tornadofx.*
 
 class SplashView : View("Movies"), MoviesView {
+    override fun showError(errorId: Int) {
+
+    }
+
+    override fun showMessage(messageId: Int) {
+
+    }
 
     private val progressProperty = SimpleBooleanProperty()
 

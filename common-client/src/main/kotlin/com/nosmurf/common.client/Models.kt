@@ -57,3 +57,6 @@ data class Comment(
 
 @Serializable
 data class NewComment(val value: String)
+
+const val DATE_FORMAT = "dd-MM-yyyy HH:mm"
+const val EMPTY_STRING = ""

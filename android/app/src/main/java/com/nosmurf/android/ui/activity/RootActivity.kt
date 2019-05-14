@@ -2,16 +2,21 @@ package com.nosmurf.android.ui.activity
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.Toast
 import com.github.salomonbrys.kodein.Kodein
 import com.github.salomonbrys.kodein.KodeinInjected
 import com.github.salomonbrys.kodein.KodeinInjector
 import com.github.salomonbrys.kodein.lazy
 import com.nosmurf.android.App
+import com.nosmurf.android.extensions.hideMe
+import com.nosmurf.android.extensions.showMe
 import com.nosmurf.android.extensions.toast
 import com.nosmurf.common.client.presentation.Presenter
 
 abstract class RootActivity<out V : Presenter.View> : AppCompatActivity(), KodeinInjected, Presenter.View {
+
+    abstract val progress: View
 
     abstract val presenter: Presenter<V>
 
@@ -52,6 +57,13 @@ abstract class RootActivity<out V : Presenter.View> : AppCompatActivity(), Kodei
 
     override fun showError(error: String) = toast(error)
 
+    override fun showError(errorId: Int) = toast(errorId)
+
     override fun showMessage(message: String) = toast(message, Toast.LENGTH_SHORT)
 
+    override fun showMessage(messageId: Int) = toast(messageId, Toast.LENGTH_SHORT)
+
+    override fun showProgress() = progress.showMe()
+
+    override fun hideProgress() = progress.hideMe()
 }

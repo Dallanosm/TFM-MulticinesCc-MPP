@@ -1,4 +1,23 @@
 <resources>
-    <string name="app_name">Multicines Cáceres MPP</string>
-    <string name="default_error">Thre was an application error</string>
+    <string name="app_name">Multicines Cáceres</string>
+
+    <string name="default_error">There was an application error</string>
+    <string name="price">Precio:</string>
+    <string name="next_passes">Próximos pases:</string>
+
+    <string name="sinopsis_test_text">Raquel (Emma Suárez) es una mujer con una complicada situación
+        personal que le lleva a necesitar conseguir con urgencia, en 24 horas, 35.000 euros,
+        conocidos coloquialmente como 70 binladens. Su última esperanza es un préstamo bancario.
+        La irrupción de dos atracadores (Nathalie Poza y Hugo Silva) cuando está a punto de cerrar
+        la transacción lo complica todo. Pero ella no se irá de allí de vacío.
+    </string>
+    <string name="see_trailer">Ver trailer</string>
+    <string name="comments">Comentarios</string>
+    <string name="see_comments">Ver comentarios</string>
+    <string name="empty_comments">Aún no hay comentarios sobre esta película.\n¡Anímate y sé el primero!</string>
+    <string name="comments_not_implemented">Aún no se ha implementado esta funcionalidad.</string>
+    <string name="empty_comments_symbol">ಥ_ಥ</string>
+    <string name="anonymous">Anónimo</string>
+    <string name="no_comments">No hay ningún comentario. ¡Anímate y deja tu opinión!</string>
+    <string name="new_comment">Añade tu comentario aquí.</string>
 </resources>

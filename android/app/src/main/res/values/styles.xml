@@ -1,11 +1,30 @@
 <resources>
 
-    <style name="AppTheme" parent="BaseTheme"></style>
     <!-- Base application theme. -->
-    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="FullScreenDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <!-- TextInputLayout -->
+
+    <style name="EditTextErrorAppearance" parent="TextAppearance.Design.Error">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="CounterStyle" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CounterOverflowStyle" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/red</item>
     </style>
 
 </resources>

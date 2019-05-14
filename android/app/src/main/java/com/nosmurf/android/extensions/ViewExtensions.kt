@@ -4,6 +4,8 @@ import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * ViewExtensions.
@@ -37,3 +39,6 @@ fun View.hideMe(gone: Boolean = true) {
 fun View.showMe() {
     this.visibility = View.VISIBLE
 }
+
+
+fun Date.toFormattedString(format: String): String = SimpleDateFormat(format).format(this)

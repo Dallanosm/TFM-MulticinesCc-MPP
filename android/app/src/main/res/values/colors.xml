@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#031137</color>
-    <color name="colorPrimaryDark">@color/colorPrimary</color>
-    <color name="colorAccent">#FF5B00</color>
+    <color name="colorPrimary">@color/background</color>
+    <color name="colorPrimaryDark">@color/background</color>
+    <color name="colorAccent">#F4511E</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="red">#E53935</color>
+    <color name="background">#CD000000</color>
+
+    <color name="classification_text">@color/white</color>
+    <color name="movie_title">@color/white</color>
+
+    <color name="low_classification">#43A047</color>
+    <color name="medium_classification">#F4511E</color>
+    <color name="high_classification">#E53935</color>
+    <color name="pass">@color/white</color>
+    <color name="passBackground">@color/colorAccent</color>
+    <color name="seeTrailer">@color/colorAccent</color>
+    <color name="seeTrailerText">@color/white</color>
+    <color name="toolbarTitleTextColor">@color/white</color>
+    <color name="toolbarBackground">#292929</color>
+    <color name="commentBackground">#3D3D3D</color>
     <color name="ic_launcher_background">#FFFFFF</color>
 </resources>
+

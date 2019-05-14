@@ -11,6 +11,13 @@ import react.RBuilder
 import react.RProps
 
 class SplashScreen : RootScreen<SplashProps, SplashState, MoviesView>(), MoviesView {
+    override fun showError(errorId: Int) {
+
+    }
+
+    override fun showMessage(messageId: Int) {
+
+    }
 
     override val presenter: MoviesPresenter = MoviesPresenter(
             executor = executor,
