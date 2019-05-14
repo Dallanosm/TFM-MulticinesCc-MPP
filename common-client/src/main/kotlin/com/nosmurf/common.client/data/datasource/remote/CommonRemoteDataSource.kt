@@ -7,6 +7,8 @@ import io.ktor.client.features.json.serializer.KotlinxSerializer
 import io.ktor.client.request.HttpRequestBuilder
 import io.ktor.client.request.get
 import io.ktor.client.request.post
+import io.ktor.http.ContentType
+import io.ktor.http.contentType
 import io.ktor.http.takeFrom
 
 class CommonRemoteDataSource : RemoteDataSource {
@@ -22,6 +24,8 @@ class CommonRemoteDataSource : RemoteDataSource {
                 setMapper(Actor::class, Actor.serializer())
                 setMapper(Schedule::class, Schedule.serializer())
                 setMapper(Comment::class, Comment.serializer())
+                setMapper(CommentResponse::class, CommentResponse.serializer())
+                setMapper(NewComment::class, NewComment.serializer())
             }
         }
     }
@@ -43,8 +47,15 @@ class CommonRemoteDataSource : RemoteDataSource {
             client.get<CommentResponse> { apiUrl("movies/$movieId/comments") }.comments
 
     override suspend fun addNewComment(newComment: NewComment, movieId: Long): List<Comment> =
-            client.post {
-                apiUrl("movies/$movieId/comments")
-                body = newComment
+            try {
+                client.post<CommentResponse> {
+                    apiUrl("movies/$movieId/comments")
+                    body = newComment
+                    contentType(ContentType.Application.Json)
+                }.comments
+            } catch (e: Exception) {
+                println("result: ${e.message}")
+                listOf()
             }
+
 }

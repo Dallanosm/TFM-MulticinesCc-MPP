@@ -8,8 +8,8 @@ import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.transactions.transaction
 import org.jsoup.Jsoup
 
-fun getComments(filmId: Long): List<Comment> = transaction {
-    CommentVo.select { CommentVo.filmId eq filmId }.toList().map { it.toComment() }
+fun getComments(filmId: Long): CommentResponse = transaction {
+    CommentResponse(CommentVo.select { CommentVo.filmId eq filmId }.toList().map { it.toComment() })
 }
 
 fun addNewComment(newComment: NewComment, candidateMovieId: Long): HttpStatusCode {

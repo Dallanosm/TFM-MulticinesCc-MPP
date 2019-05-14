@@ -67,7 +67,7 @@
                 android:orientation="horizontal"
                 android:visibility="visible">
 
-                <com.google.android.material.textfield.TextInputLayout
+                <android.support.design.widget.TextInputLayout
                     android:id="@+id/commentLabel"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
                     app:counterTextAppearance="@style/CounterStyle"
                     app:errorTextAppearance="@style/EditTextErrorAppearance">
 
-                    <android.support.v4.widget.AppCompatEditText
+                    <android.support.v7.widget.AppCompatEditText
                         android:id="@+id/newComment"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -89,9 +89,9 @@
                         android:maxLength="200"
                         android:textColor="@color/white" />
 
-                </com.google.android.material.textfield.TextInputLayout>
+                </android.support.design.widget.TextInputLayout>
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <android.support.design.widget.FloatingActionButton
                     android:id="@+id/addNewComment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -28,7 +28,6 @@ class MovieDetailsPresenter(private val executor: Executor, private val reposito
     }
 
     fun onSeeTrailerClicked() {
-        //  view.showTrailer(movie.trailer.split("embed/")[1])
         view.showTrailer(movie.trailer.replace("embed/", "watch?v="))
     }
 

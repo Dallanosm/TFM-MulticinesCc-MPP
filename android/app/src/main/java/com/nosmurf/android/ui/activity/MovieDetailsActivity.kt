@@ -17,6 +17,7 @@ import com.nosmurf.android.extensions.load
 import com.nosmurf.android.extensions.showMe
 import com.nosmurf.android.navigator.openVideo
 import com.nosmurf.android.ui.adapter.NextPassAdapter
+import com.nosmurf.android.ui.dialog.CommentsDialog
 import com.nosmurf.common.client.MovieDetail
 import com.nosmurf.common.client.presentation.MovieDetailView
 import com.nosmurf.common.client.presentation.MovieDetailsPresenter
@@ -97,8 +98,8 @@ class MovieDetailsActivity : RootActivity<MovieDetailView>(), MovieDetailView {
     }
 
     override fun navigateToCommentsScreen(id: Long) {
-        // val commentsDialog = CommentsDialog.newInstance(id)
-        //commentsDialog.show(supportFragmentManager, DIALOG_TAG)
+         val commentsDialog = CommentsDialog.newInstance(id)
+        commentsDialog.show(supportFragmentManager, DIALOG_TAG)
     }
 
 
