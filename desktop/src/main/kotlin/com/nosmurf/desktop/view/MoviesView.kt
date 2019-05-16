@@ -10,14 +10,7 @@ import javafx.beans.property.SimpleBooleanProperty
 import javafx.scene.Parent
 import tornadofx.*
 
-class SplashView : View("Movies"), MoviesView {
-    override fun showError(errorId: Int) {
-
-    }
-
-    override fun showMessage(messageId: Int) {
-
-    }
+class MoviesView : View("Movies"), MoviesView {
 
     private val progressProperty = SimpleBooleanProperty()
 
