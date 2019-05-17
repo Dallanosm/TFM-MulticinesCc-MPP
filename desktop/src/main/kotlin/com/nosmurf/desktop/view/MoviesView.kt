@@ -10,9 +10,10 @@ import javafx.beans.property.SimpleBooleanProperty
 import javafx.scene.Parent
 import tornadofx.*
 
-class MoviesView : View("Movies"), MoviesView {
+class MoviesView : View("Multicines Cáceres"), MoviesView {
 
     private val progressProperty = SimpleBooleanProperty()
+    private var moviesProperty = observableList<Movie>()
 
     private val presenter = MoviesPresenter(
             executor = executor,
@@ -33,6 +34,18 @@ class MoviesView : View("Movies"), MoviesView {
 
     override val root: Parent = stackpane {
         fitToParentSize()
+        datagrid(moviesProperty) {
+            cellCache {
+                cellHeight = 650.0
+                cellWidth = 320.0
+                imageview(it.img) {
+                    fitHeight = 650.0
+                    fitWidth = 320.0
+                    onUserSelect { }
+                }
+            }
+
+        }
         progressbar { visibleWhen { progressProperty } }
     }
 
@@ -53,7 +66,7 @@ class MoviesView : View("Movies"), MoviesView {
     }
 
     override fun showMovies(movies: List<Movie>) {
-
+        moviesProperty.addAll(movies)
     }
 
 }
