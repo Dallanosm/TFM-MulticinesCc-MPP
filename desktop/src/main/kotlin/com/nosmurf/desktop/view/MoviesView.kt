@@ -7,6 +7,7 @@ import com.nosmurf.desktop.di.errorHandler
 import com.nosmurf.desktop.di.executor
 import com.nosmurf.desktop.di.repository
 import javafx.beans.property.SimpleBooleanProperty
+import javafx.geometry.Pos
 import javafx.scene.Parent
 import tornadofx.*
 
@@ -32,9 +33,25 @@ class MoviesView : View("Multicines Cáceres"), MoviesView {
         presenter.destroy()
     }
 
-    override val root: Parent = stackpane {
+    override val root: Parent = borderpane {
+
         fitToParentSize()
-        datagrid(moviesProperty) {
+
+        left = vbox {
+            alignment = Pos.CENTER
+            button {
+                text = "Previous"
+            }
+        }
+
+        right = vbox {
+            alignment = Pos.CENTER
+            button {
+                text = "Next"
+            }
+        }
+
+        center = datagrid(moviesProperty) {
             cellCache {
                 cellHeight = 650.0
                 cellWidth = 320.0
@@ -44,9 +61,9 @@ class MoviesView : View("Multicines Cáceres"), MoviesView {
                     onUserSelect { }
                 }
             }
-
         }
-        progressbar { visibleWhen { progressProperty } }
+
+        bottom = progressbar { visibleWhen { progressProperty } }
     }
 
     override fun showProgress() {
