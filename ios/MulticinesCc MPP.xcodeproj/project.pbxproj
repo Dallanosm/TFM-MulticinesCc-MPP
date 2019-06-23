@@ -15,9 +15,10 @@
 		AD043D8222059B0200E18726 /* MultiplatformSeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD043D8122059B0200E18726 /* MultiplatformSeedTests.swift */; };
 		AD043D8D22059B0200E18726 /* MultiplatformSeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD043D8C22059B0200E18726 /* MultiplatformSeedUITests.swift */; };
 		AD043DA52205AE7B00E18726 /* IosErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD043DA42205AE7B00E18726 /* IosErrorHandler.swift */; };
-		AD7613F322060F4800CA5E72 /* ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7613F222060F4800CA5E72 /* ios.framework */; };
-		AD7613F422060F4C00CA5E72 /* ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7613F222060F4800CA5E72 /* ios.framework */; };
-		AD7613F522060F4C00CA5E72 /* ios.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD7613F222060F4800CA5E72 /* ios.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AD38F41222C01F280002DD6E /* IosExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD38F41122C01F280002DD6E /* IosExecutor.swift */; };
+		AD38F41422C01F630002DD6E /* IosLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD38F41322C01F630002DD6E /* IosLocalDataSource.swift */; };
+		AD38F41522C0204D0002DD6E /* ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7613F222060F4800CA5E72 /* ios.framework */; };
+		AD38F41622C0204D0002DD6E /* ios.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AD7613F222060F4800CA5E72 /* ios.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		AD7613ED22060E6300CA5E72 /* Embed Frameworks */ = {
+		AD38F41722C0204E0002DD6E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AD7613F522060F4C00CA5E72 /* ios.framework in Embed Frameworks */,
+				AD38F41622C0204D0002DD6E /* ios.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +67,8 @@
 		AD043D8C22059B0200E18726 /* MultiplatformSeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplatformSeedUITests.swift; sourceTree = "<group>"; };
 		AD043D8E22059B0200E18726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD043DA42205AE7B00E18726 /* IosErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosErrorHandler.swift; sourceTree = "<group>"; };
+		AD38F41122C01F280002DD6E /* IosExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosExecutor.swift; sourceTree = "<group>"; };
+		AD38F41322C01F630002DD6E /* IosLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosLocalDataSource.swift; sourceTree = "<group>"; };
 		AD7613F222060F4800CA5E72 /* ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ios.framework; path = build/lib/main/debug/ios_x64/ios.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,8 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD7613F422060F4C00CA5E72 /* ios.framework in Frameworks */,
-				AD7613F322060F4800CA5E72 /* ios.framework in Frameworks */,
+				AD38F41522C0204D0002DD6E /* ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +129,8 @@
 				AD043D7522059B0200E18726 /* LaunchScreen.storyboard */,
 				AD043D7822059B0200E18726 /* Info.plist */,
 				AD043DA42205AE7B00E18726 /* IosErrorHandler.swift */,
+				AD38F41122C01F280002DD6E /* IosExecutor.swift */,
+				AD38F41322C01F630002DD6E /* IosLocalDataSource.swift */,
 			);
 			path = MultiplatformSeed;
 			sourceTree = "<group>";
@@ -168,7 +172,7 @@
 				AD043D6522059B0100E18726 /* Sources */,
 				AD043D6622059B0100E18726 /* Frameworks */,
 				AD043D6722059B0100E18726 /* Resources */,
-				AD7613ED22060E6300CA5E72 /* Embed Frameworks */,
+				AD38F41722C0204E0002DD6E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,7 +317,9 @@
 			files = (
 				AD043D6F22059B0100E18726 /* MoviesViewController.swift in Sources */,
 				AD043DA52205AE7B00E18726 /* IosErrorHandler.swift in Sources */,
+				AD38F41222C01F280002DD6E /* IosExecutor.swift in Sources */,
 				AD043D6D22059B0100E18726 /* AppDelegate.swift in Sources */,
+				AD38F41422C01F630002DD6E /* IosLocalDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

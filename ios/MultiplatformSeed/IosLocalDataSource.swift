@@ -1,5 +1,5 @@
 //
-//  IosLocalDatasource.swift
+//  IosLocalDataSource.swift
 //  MultiplatformSeed
 //
 //  Created by Daniel Llanos Muñoz on 23/06/2019.
@@ -9,6 +9,6 @@
 import Foundation
 import ios
 
-class IosLocalDataSource :NSObject, LocalDataSource {
+class IosLocalDataSource: NSObject, LocalDataSource {
 
 }

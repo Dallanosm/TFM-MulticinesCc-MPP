@@ -20,6 +20,7 @@ class MoviesViewController: UIViewController, MoviesView {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter.initialize()
+        print("helloooo")
     }
     
     func showProgress() {
@@ -39,7 +40,8 @@ class MoviesViewController: UIViewController, MoviesView {
     }
     
     func showMovies(movies: [Movie]) {
-        print(movies)
+        print("hello")
+        print(movies[0].title)
     }
 
 }
