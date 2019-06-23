@@ -11,13 +11,15 @@ import ios
 
 class MoviesViewController: UIViewController, MoviesView {
 
-    lazy var presenter: MoviesPresenter = MoviesPresenter(
+    private lazy var presenter: MoviesPresenter = MoviesPresenter(
+        executor: IosExecutor(),
+        repository: CommonRepository(local: IosLocalDataSource(), remote: CommonRemoteDataSource()),
         view: self,
         errorHandler: IosErrorHandler())
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.presenter.initialize()
     }
     
     func showProgress() {
@@ -34,6 +36,10 @@ class MoviesViewController: UIViewController, MoviesView {
     
     func showMessage(message: String) {
         
+    }
+    
+    func showMovies(movies: [Movie]) {
+        print(movies)
     }
 
 }

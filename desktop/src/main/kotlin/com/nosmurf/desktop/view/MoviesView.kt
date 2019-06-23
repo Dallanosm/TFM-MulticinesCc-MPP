@@ -38,16 +38,26 @@ class MoviesView : View("Multicines Cáceres"), MoviesView {
         fitToParentSize()
 
         left = vbox {
+            vboxConstraints {
+                marginLeft = 10.0
+            }
             alignment = Pos.CENTER
-            button {
-                text = "Previous"
+            imageview("https://static.thenounproject.com/png/1018588-200.png") {
+                fitHeight = 50.0
+                fitWidth = 50.0
+                setOnMouseClicked { }
             }
         }
 
         right = vbox {
+            vboxConstraints {
+                marginRight = 100.0
+            }
             alignment = Pos.CENTER
-            button {
-                text = "Next"
+            imageview("https://static.thenounproject.com/png/1018583-200.png") {
+                fitHeight = 50.0
+                fitWidth = 50.0
+                setOnMouseClicked { }
             }
         }
 
@@ -63,7 +73,10 @@ class MoviesView : View("Multicines Cáceres"), MoviesView {
             }
         }
 
-        bottom = progressbar { visibleWhen { progressProperty } }
+        bottom = hbox {
+            alignment = Pos.CENTER
+            progressbar { visibleWhen { progressProperty } }
+        }
     }
 
     override fun showProgress() {
