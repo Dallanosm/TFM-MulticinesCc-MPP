@@ -71,9 +71,7 @@ class CommentsDialog : RootDialog<CommentsView>(), CommentsView {
     override fun hideProgress() = progressView.hideMe()
 
     override fun showError(error: String) = toast(error)
-    override fun showError(errorId: Int) = toast(errorId)
     override fun showMessage(message: String) = toast(message)
-    override fun showMessage(messageId: Int) = toast(messageId)
 
     override fun showComments(comments: List<Comment>) {
         emptyContentView.hideMe()
